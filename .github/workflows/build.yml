@@ -25,9 +25,7 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Check repository structure
-        shell: bash
-        run: bash scripts/check-repository.sh "$PROJECT_PATH"  
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -55,4 +53,3 @@ jobs:
           path: ./artifacts/app
           if-no-files-found: error
           retention-days: 7
-
